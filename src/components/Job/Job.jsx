@@ -3,7 +3,7 @@ const Job = ({ job }) => {
 
     const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
     return (
-        <div className="border-blue-100  border-2 p-4 rounded-xl">
+        <div className="bg-gray-100 border-blue-200 text-black border-4 p-4 rounded-xl">
             <img className="w-32 my-2" src={logo} alt="" />
             <h3 className="text-2xl my-2">{job_title}</h3>
             <p className="my-4">{company_name}</p>
