@@ -1,4 +1,5 @@
-
+import { CiLocationOn } from "react-icons/ci";
+import { MdPayments } from "react-icons/md";
 const Job = ({ job }) => {
 
     const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
@@ -14,10 +15,12 @@ const Job = ({ job }) => {
                 <span className="text-blue-500 border-blue-300 mx-4 bg-white border-2 p-2 rounded-xl
             ">{job_type}</span>
             </p>
-            <p className="my-2">
-                <span>{location}  </span>
-                <span>  {salary}  </span>
+            <p className="my-2 flex gap-2  items-center">
+                <CiLocationOn ></CiLocationOn>{location}
+                <MdPayments></MdPayments> {salary}
             </p>
+            <button className="text-blue-500 border-blue-300  bg-white border-2 p-2 rounded-xl
+            ">View Details</button>
         </div>
     );
 };
