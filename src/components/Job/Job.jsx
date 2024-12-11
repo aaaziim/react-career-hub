@@ -1,8 +1,9 @@
 import { CiLocationOn } from "react-icons/ci";
 import { MdPayments } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 const Job = ({ job }) => {
 
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
+    const { id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
     return (
         <div className="bg-gray-100 border-blue-200 text-black border-4 p-4 rounded-xl">
             <img className="w-32 my-2" src={logo} alt="" />
@@ -19,8 +20,9 @@ const Job = ({ job }) => {
                 <CiLocationOn ></CiLocationOn>{location}
                 <MdPayments></MdPayments> {salary}
             </p>
-            <button className="text-blue-500 border-blue-300  bg-white border-2 p-2 rounded-xl
-            ">View Details</button>
+            <NavLink to={`/job/${id}`}><button className="text-blue-500 border-blue-300  bg-white border-2 p-2 rounded-xl
+            ">View Details</button></NavLink>
+
         </div>
     );
 };
