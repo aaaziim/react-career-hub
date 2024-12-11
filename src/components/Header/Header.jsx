@@ -4,11 +4,11 @@ const Header = () => {
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/statistics">Statistics</NavLink></li>
+
 
         <li><NavLink to="/jobs">Jobs</NavLink></li>
         <li><NavLink to="/applied">Applied Jobs</NavLink></li>
-        <li><NavLink to="/blogs">Blogs</NavLink></li>
+
     </>
     return (
         <div className="navbar bg-base-100">
@@ -44,7 +44,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Start Apply</a>
+                <NavLink className="btn" to="/jobs">Start Apply</NavLink>
             </div>
         </div>
     );

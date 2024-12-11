@@ -1,8 +1,9 @@
+import { NavLink } from "react-router-dom";
 import model from "../../assets/images/user.png"
 const Banner = () => {
     return (
         <div >
-            <div className="hero bg-base-200 h-1/3">
+            <div className="hero bg-base-200 h-1/3 rounded-3xl">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img
                         src={model}
@@ -12,7 +13,9 @@ const Banner = () => {
                         <p className="text-3xl py-6">
                             to get your dream job.
                         </p>
-                        <button className="btn btn-primary">Apply Now!</button>
+                        <NavLink className="btn btn-primary" to="/jobs">Apply Now!</NavLink>
+
+
                     </div>
                 </div>
             </div>
