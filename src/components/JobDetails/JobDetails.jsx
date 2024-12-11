@@ -1,7 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { saveJobApplication } from "../../Utility/utilities";
+import { saveJobApplication, getAppliedJobs } from "../../Utility/utilities";
 
 
 const JobDetails = () => {
@@ -22,9 +22,14 @@ const JobDetails = () => {
 
 
     const handleApplyJob = () => {
-        saveJobApplication(idInt);
-        successNotify();
-    }
+        const appliedJobs = getAppliedJobs();
+        if (appliedJobs.includes(idInt)) {
+            errorNotify();
+        } else {
+            saveJobApplication(idInt);
+            successNotify();
+        }
+    };
 
 
 
